@@ -1,0 +1,7 @@
+template {
+  background-color: rgb(94, 34, 23); /* Replace with your desired background */
+  color: #1a1a1a; /* Replace with your desired text color */
+  font-family: 'Inter', sans-serif; /* Optional: global font */
+  margin: 0;
+  padding: 0;
+}
