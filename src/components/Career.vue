@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const desserts = ref([
+const jobs = ref([
   {
    title: 'Software Engineer',
     field: 'Engineering',
@@ -36,11 +36,28 @@ const desserts = ref([
 </script>
 <template>
     <h1>career</h1>
-    <p>Some texts about job opportunities and stuff</p>
+
+  <v-row align="center" class="mt-6">
+  <v-col>
+    <p>Left content</p>
+  </v-col>
+
+  <!-- Divider column to prevent overlap -->
+  <v-col cols="auto" class="d-flex justify-center">
+    <v-divider vertical class="mx-4" style="height: 100%;" />
+  </v-col>
+
+  <v-col>
+    <p>Right content</p>
+  </v-col>
+  </v-row>
+
+  <img class="arch-img" src="/public/Images/home/minimalistic.jpg" />
+  <p>Some texts about job opportunities and stuff</p>
     <v-spacer></v-spacer>
     <h4>Job opportunities</h4>
-  <v-table>
-    <thead>
+    <v-table  hover>
+    <thead class="table-header">
       <tr>
         <th class="text-left">
           Title
@@ -58,8 +75,9 @@ const desserts = ref([
     </thead>
     <tbody>
       <tr
-        v-for="item in desserts"
-        :key="item.name"
+        v-for="(item, index) in jobs"
+        :key="index"
+        :class="index % 2 === 0 ? 'row-even' : 'row-odd'"
       >
         <td>{{ item.title }}</td>
         <td>{{ item.field }}</td>
@@ -69,14 +87,27 @@ const desserts = ref([
          for deadline. 
          if the date of deadline passes apply btn becomes inactive, 
          btn is active before deadline date. 
-         Show the date to the left of the btn 
+         Show the massege "deadline-passed" to the left of the btn 
          -->
       </tr>
     </tbody>
   </v-table>
+
  <router-link to="/application">
-  <button>Apply</button>
+  <button class="apply-btn">Apply</button>
 </router-link>
 
 </template>
-<style scoped></style>
+
+<style scoped>
+.table-header {
+  background-color: rgb(173,195,183);
+  color: rgb(5, 5, 5);
+}
+.row-even {
+  background-color: rgb(128,150,113);
+}
+.row-odd {
+  background-color: rgb(173,195,183);
+}
+</style>

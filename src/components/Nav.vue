@@ -1,85 +1,81 @@
 <script setup>
-import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const route = useRoute();
 </script>
 
 <template>
-    <div class="nav-container">
-    <v-speed-dial
-  location="right"
-  transition="slide-y-reverse-transition"
->
-  <template v-slot:activator="{ props: activatorProps }">
-    <v-fab
-      v-bind="activatorProps"
-      size="large"
-      icon="mdi-orbit"
-      color="rgb(94, 34, 23)"
-    ></v-fab>
-  </template>
+  <header>
+    <!-- Use :class for dynamic classes -->
+    <nav :class="['nav', { 'nav-overlay': route.path === '/' }]">
+      <div class="nav-left">
+        <RouterLink to="/" class="brand">Ovrspace</RouterLink>
+      </div>
 
-  <v-btn
-   key="home"
-   icon="mdi-home-circle-outline"
-   @click="$router.push('/')"
-   title="Home"
-   color="rgb(94, 34, 23)"
-   > 
-</v-btn>
-  <v-btn 
-  key="about"
-  icon="mdi-comment"
-  @click="$router.push('/about')"
-  title="About"
-  color="rgb(94, 34, 23)"
-  >
-  </v-btn>
-  <v-btn key="projects" 
-  icon="mdi-home-modern"
-  color="rgb(94, 34, 23)"
-  @click="$router.push('/projects')"
-  title="Projects"
-  ></v-btn>
-  <v-btn key="contact" 
-  icon="mdi-email"
-  @click="$router.push('/contact')"
-  title="Contact"
-  color="rgb(94, 34, 23)"
-  ></v-btn>
-    <v-btn
-      key="press"
-      icon="mdi-file"
-      @click="$router.push('/press')"
-      title="Press"
-      color="rgb(94, 34, 23)"
-    ></v-btn>
-    <v-btn
-      key="career"
-      icon="mdi-badge-account"
-      @click="$router.push('/career')"
-      title="Career"
-      color="rgb(94, 34, 23)"
-    ></v-btn>
-    </v-speed-dial>
-    </div>
-    <div class="search">
-        <input type="search" placeholder="Search..."  />
-    </div>
+      <ul class="nav-center">
+        <li><RouterLink to="/about">About</RouterLink></li>
+        <li><RouterLink to="/projects">Projects</RouterLink></li>
+        <li><RouterLink to="/career">Career</RouterLink></li>
+        <li><RouterLink to="/press">Press</RouterLink></li>
+        <li><RouterLink to="/contact">Contact</RouterLink></li>
+      </ul>
+
+      <div class="nav-right">
+        <input type="search" placeholder="Search..." class="search" />
+      </div>
+    </nav>
+  </header>
 </template>
-<style>
-.nav-container {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  z-index: 4000;
-  color: rgb(252, 248, 214);
+
+<style scoped>
+.nav {
+  position: relative; /* default for all pages */
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(128,150,113); /* default background */
 }
-.search {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 4000;
-  color: rgb(94, 34, 23);
+
+.nav-overlay {
+  position: absolute; /* only on homepage */
+  top: 0;
+  left: 0;
+  background: transparent;
+  z-index: 1000;
+}
+
+.nav-left .brand {
+  color: rgb(163, 177, 138);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.nav-center {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-center li a {
+  color: rgb(173,195,183);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-right .search {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: rgb(163, 177, 138);
+}
+
+.nav-right .search::placeholder {
+  color: rgb(163, 177, 138);
 }
 </style>
-
-<!-- mdi:icons -> mdi.bessarabov.com -->

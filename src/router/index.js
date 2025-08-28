@@ -6,6 +6,7 @@ import Contact from '../components/Contact.vue'
 import Press from '../components/Press.vue'
 import Career from '../components/Career.vue'
 import Nav from '../components/Nav.vue'
+import Footer from '@/components/Footer.vue'
 import Application from '../components/Application.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/nav',
       name: 'nav',
       component: Nav,
+    },
+         {
+      path: '/footer',
+      name: 'footer',
+      component: Footer,
     },
     {
       path: '/application',
