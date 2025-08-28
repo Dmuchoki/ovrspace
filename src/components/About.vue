@@ -33,7 +33,7 @@ import { RouterLink } from "vue-router"
   </v-col>
 
   <v-col>
-    <p>Text about engineering</p>
+    <p>Text about Engineering</p>
     <p>Right content</p>
   </v-col>
 </v-row>
