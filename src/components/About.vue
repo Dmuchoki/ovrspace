@@ -68,7 +68,7 @@ import { RouterLink } from "vue-router"
 
     <!-- Project 3 -->
     <RouterLink to="/projects/planning">
-      <img class="content-img" src="@/assets/Images/home/Greenroom.jpg" alt="Planning project" />
+      <img class="content-img" src="@/assets/Images/home/greenroom.jpg" alt="Planning project" />
     </RouterLink>
 
     <!-- Project 4 -->
@@ -78,12 +78,12 @@ import { RouterLink } from "vue-router"
 
     <!-- Project 5 -->
         <RouterLink to="/projects/engineering">
-      <img class="content-img" src="@/assets/Images/home/Greenlivingroom.jpg" alt="Engineering project" />
+      <img class="content-img" src="@/assets/Images/home/greenlivingroom.jpg" alt="Engineering project" />
     </RouterLink>
 
     <!-- Project 6 -->
         <RouterLink to="/projects/planning">
-      <img class="content-img" src="@/assets/Images/home/Greenroom.jpg" alt="Planning project" />
+      <img class="content-img" src="@/assets/Images/home/greenroom.jpg" alt="Planning project" />
     </RouterLink>
   </div>
 </template>
