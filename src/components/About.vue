@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router"
 
 <template>
   <h3>About</h3>
-  <img class="img" src="../assets/Images/home/minimalistic.jpg" />
+  <img class="img" src="@/assets/Images/home/minimalistic.jpg" />
   <p>Some text on about information</p>
 
   <h3>Architecture</h3>
@@ -63,7 +63,7 @@ import { RouterLink } from "vue-router"
 
     <!-- Project 2 -->
     <RouterLink to="/projects/engineering">
-      <img class="content-img" src="@/assets/Images/home/Greenlivingroom.jpg" alt="Engineering project" />
+      <img class="content-img" src="@/assets/Images/home/greenlivingroom.jpg" alt="Engineering project" />
     </RouterLink>
 
     <!-- Project 3 -->
