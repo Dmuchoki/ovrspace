@@ -4,7 +4,7 @@ import { RouterLink } from "vue-router"
 
 <template>
   <h3>About</h3>
-  <img class="img" src="/public/Images/home/minimalistic.jpg" />
+  <img class="img" src="@/assets/Images/home/minimalistic.jpg" />
   <p>Some text on about information</p>
 
   <h3>Architecture</h3>
@@ -18,7 +18,7 @@ import { RouterLink } from "vue-router"
   </v-col>
 
   <v-col>
-    <img class="arch-img" src="/public/Images/home/minimalistic.jpg" />
+    <img class="arch-img" src="@/assets/Images/home/minimalistic.jpg" />
   </v-col>
 </v-row>
   <h3>Engineering</h3>
@@ -57,33 +57,33 @@ import { RouterLink } from "vue-router"
   <div class="image-list">
     <!-- Project 1 -->
     <RouterLink to="/projects/architecture">
-      <img class="content-img" src="/public/Images/home/minimalistic.jpg" alt="Architecture project" />
+      <img class="content-img" src="@/assets/Images/home/minimalistic.jpg" alt="Architecture project" />
     </RouterLink>
     
 
     <!-- Project 2 -->
     <RouterLink to="/projects/engineering">
-      <img class="content-img" src="/public/Images/home/Greenlivingroom.jpg" alt="Engineering project" />
+      <img class="content-img" src="@/assets/Images/home/greenlivingroom.jpg" alt="Engineering project" />
     </RouterLink>
 
     <!-- Project 3 -->
     <RouterLink to="/projects/planning">
-      <img class="content-img" src="/public/Images/home/Greenroom.jpg" alt="Planning project" />
+      <img class="content-img" src="@/assets/Images/home/greenroom.jpg" alt="Planning project" />
     </RouterLink>
 
     <!-- Project 4 -->
         <RouterLink to="/projects/architecture">
-      <img class="content-img" src="/public/Images/home/minimalistic.jpg" alt="Architecture project" />
+      <img class="content-img" src="@/assets/Images/home/minimalistic.jpg" alt="Architecture project" />
     </RouterLink>
 
     <!-- Project 5 -->
         <RouterLink to="/projects/engineering">
-      <img class="content-img" src="/public/Images/home/Greenlivingroom.jpg" alt="Engineering project" />
+      <img class="content-img" src="@/assets/Images/home/greenlivingroom.jpg" alt="Engineering project" />
     </RouterLink>
 
     <!-- Project 6 -->
         <RouterLink to="/projects/planning">
-      <img class="content-img" src="/public/Images/home/Greenroom.jpg" alt="Planning project" />
+      <img class="content-img" src="@/assets/Images/home/greenroom.jpg" alt="Planning project" />
     </RouterLink>
   </div>
 </template>
